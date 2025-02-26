@@ -1,40 +1,24 @@
 /**
- * @param {number[]} nums
- * @param {number} target
- * @return {number}
+ * @param {string} digits
+ * @return {string[]}
  */
-var threeSumClosest = function (nums, target) {
-    nums.sort((a, b) => a - b);
-
-    let answer = 1 << 30;
-
-    const n = nums.length;
-
-    for (let i = 0; i < n; ++i) {
-        let j = i + 1;
-        let k = n - 1;
-
-        while (j < k) {
-            const t = nums[i] + nums[j] + nums[k];
-
-            if (t === target) {
-                return t;
-            }
-
-            if (Math.abs(t - target) < Math.abs(answer - target)) {
-                answer = t;
-            }
-
-            if (t > target) {
-                --k;
-            } else {
-                ++j;
+var letterCombinations = function (digits) {
+    if (digits.length == 0) {
+        return [];
+    }
+    const ans = [''];
+    const d = ['abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz'];
+    for (const i of digits) {
+        const s = d[parseInt(i) - 2];
+        const t = [];
+        for (const a of ans) {
+            for (const b of s) {
+                t.push(a + b);
             }
         }
+        ans.splice(0, ans.length, ...t);
     }
-
-    return answer;
+    return ans;
 };
 
-// console.log(threeSumClosest([-1,2,1,-4], 1)); // 2
-console.log(threeSumClosest([[0,0,0]], 1)); // 0
+console.log(letterCombinations('23')); // ["ad","ae","af","bd","be","bf","cd","ce","cf"]

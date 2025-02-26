@@ -1,27 +1,27 @@
-# 3Sum Closest Task16
+# №17. Letter Combinations of a Phone Number
+#    (https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/) #medium
 
-Given an integer array nums of length n and an integer target, find three integers in nums such that the sum is closest to target.
-
-Return the sum of the three integers.
-
-You may assume that each input would have exactly one solution.
+Given a string containing digits from 2-9 inclusive, return all possible letter combinations that
+the number could represent. Return the answer in any order.
+A mapping of digits to letters (just like on the telephone buttons) is given below. Note that 1
+does not map to any letters.
 
  
-
 Example 1:
 
-Input: nums = [-1,2,1,-4], target = 1
-Output: 2
-Explanation: The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
+Input: digits = "23"
+Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
 Example 2:
 
-Input: nums = [0,0,0], target = 1
-Output: 0
-Explanation: The sum that is closest to the target is 0. (0 + 0 + 0 = 0).
+Input: digits = ""
+Output: []
+Example 3:
+
+Input: digits = "2"
+Output: ["a","b","c"]
  
 
 Constraints:
 
-3 <= nums.length <= 500
--1000 <= nums[i] <= 1000
--104 <= target <= 104
+0 <= digits.length <= 4
+digits[i] is a digit in the range ['2', '9'].
