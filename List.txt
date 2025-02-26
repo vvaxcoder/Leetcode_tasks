@@ -1,1 +1,2 @@
 Задача: №16. 3Sum Closest (https://leetcode.com/problems/3sum-closest/) #medium
+Задача: №17. Letter Combinations of a Phone Number (https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/) #medium
